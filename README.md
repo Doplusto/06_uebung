@@ -109,8 +109,25 @@ In der Vorlesung haben wir die Commands `|` (Pipe) und `grep` kennengelernt, die
 
 - Wie sieht die Kombination von `ls`, `|` und `grep` aus, die nur die `.md` Dateien liefert?
 
+**Lösung**
+
+```shell
+$ ls -R | grep ".md"  
+datei2.md
+datei2.md
+```
+
 - Wie kann ich in den Dateien `FH` mit `TH` und `2018` mit `2019` ersetzen mit jeweils einer Zeile als Kombination aus `ls`, `|`, `grep` und `sed`?
 
 - Finden Sie mittels `grep` heraus, wieviele `Error` Einträge in der Datei `./data/error.log` vorhanden sind?
 
+**Lösung**
 
+```shell
+$ grep "Error" ../data/error.log  
+2019-11-10 14:31:48.112350 : Error  --- Unfortunatley something happened!
+2019-11-10 14:31:48.112851 : Error  --- Unfortunatley something happened!
+2019-11-10 14:31:48.112903 : Error  --- Unfortunatley something happened!
+2019-11-10 14:31:50.882980 : Error  --- Unfortunatley something happened!
+2019-11-10 14:31:51.244300 : Error  --- Unfortunatley something happened!
+```
