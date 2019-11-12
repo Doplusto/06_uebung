@@ -1,11 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-for FILE in ./* ./**/*1* ./**/*3*
-do
-    if [ ! -d $FILE ]
-    then
-        echo $FILE
-        sed -i 's/2019/2020/g' $FILE
-        sed -i 's/FH/TH/' $FILE
-    fi
+for f in ./dir*/*[1,3].txt; do
+        sed -i 's/2018/2019/;s/FH/TH/' "$f"
 done
